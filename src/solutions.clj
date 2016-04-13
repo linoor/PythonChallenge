@@ -13,7 +13,6 @@ rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp\\
 . bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q\\
 ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq()\\
  gq pcamkkclbcb. lmu ynnjw ml rfc spj.")
-(println (int \a))
 
 (let [translated (map #(char (mod (+ 2 (int %))
                                   (+ 26 (int \a))))
