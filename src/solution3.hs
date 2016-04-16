@@ -1,13 +1,10 @@
 import Data.List
-import Data.Ord
+import Data.Map
 
 main :: IO ()
 main = do
-    --print $ rare "aslkdjalsdjaslkdz"
     content <- readFile "ex2input.data"
-    --print $ map snd $ take 8 $ rare content
-    print $ filter (\x -> x `elem` ['a'..'z']) content
+    print $ rare content
 
-
-rare :: String -> [(Int, Char)]
-rare input = sortBy (comparing fst) $ map (\l -> (length l, head l)) $ group (sort input)
+rare :: String -> [(Char, Int)]
+rare input = toList $ fromListWith (+) [(x, 1) | x <- input]
